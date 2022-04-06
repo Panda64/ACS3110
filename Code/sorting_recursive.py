@@ -5,9 +5,6 @@ def merge(items1, items2, new_items=[]):
     and return a new list containing all items in sorted order.
     TODO: Running time: O(n)
     TODO: Memory usage: O(n)"""
-    # TODO: Repeat until one list is empty
-    # TODO: Find minimum item in both lists and append it to new list
-    # TODO: Append remaining items in non-empty list to new list
     if not items1 and not items2:
         return new_items
     elif not items1:
@@ -31,9 +28,6 @@ def split_sort_merge(items):
      a list in sorted order.
      TODO: Running time: O(n log n)
      TODO: Memory usage: O(n)"""
-     # TODO: Split items list into approximately equal halves
-     # TODO: Sort each half using any other sorting algorithm
-     # TODO: Merge sorted halves into one list in sorted order
      half1 = items[:len(items)//2]
      half2 = items[len(items)//2:]
      insertion_sort(half1)
@@ -46,10 +40,6 @@ def merge_sort(items):
     sorting each recursively, and merging results into a list in sorted order.
     TODO: Running time: O(n log n)
     TODO: Memory usage: O(n)"""
-    # TODO: Check if list is so small it's already sorted (base case)
-    # TODO: Split items list into approximately equal halves
-    # TODO: Sort each half by recursively calling merge sort
-    # TODO: Merge sorted halves into one list in sorted order
     if len(items) <= 1:
         return items
     
@@ -66,11 +56,6 @@ def partition(items, low, high):
     `[low...p-1]`, and items greater than pivot into range `[p+1...high]`.
     TODO: Running time: O(n)
     TODO: Memory usage: O(1)"""
-    # TODO: Choose a pivot any way and document your method in docstring above
-    # TODO: Loop through all items in range [low...high]
-    # TODO: Move items less than pivot into front of range [low...p-1]
-    # TODO: Move items greater than pivot into back of range [p+1...high]
-    # TODO: Move pivot item into final position [p] and return index p
     pivot = items[high]
     i = low
     for j in range(low, high):
@@ -87,10 +72,6 @@ def quick_sort(items, low=None, high=None):
     TODO: Best case running time: O(n log n)
     TODO: Worst case running time: O(n^2)
     TODO: Memory usage: O(log n)"""
-    # TODO: Check if high and low range bounds have default values (not given)
-    # TODO: Check if list or range is so small it's already sorted (base case)
-    # TODO: Partition items in-place around a pivot and get index of pivot
-    # TODO: Sort each sublist range by recursively calling quick sort
     if low is None:
         low = 0
 
