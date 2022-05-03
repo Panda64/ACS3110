@@ -3,8 +3,8 @@ from sorting_iterative import insertion_sort
 def merge(items1, items2, new_items=[]):
     """Merge given lists of items, each assumed to already be in sorted order,
     and return a new list containing all items in sorted order.
-    TODO: Running time: O(n)
-    TODO: Memory usage: O(n)"""
+    Running time: O(n)
+    Memory usage: O(n)"""
     if not items1 and not items2:
         return new_items
     elif not items1:
@@ -26,8 +26,8 @@ def split_sort_merge(items):
      """Sort given items by splitting list into two approximately equal halves,
      sorting each with an iterative sorting algorithm, and merging results into
      a list in sorted order.
-     TODO: Running time: O(n log n)
-     TODO: Memory usage: O(n)"""
+     Running time: O(n log n)
+     Memory usage: O(n)"""
      half1 = items[:len(items)//2]
      half2 = items[len(items)//2:]
      insertion_sort(half1)
@@ -38,8 +38,8 @@ def split_sort_merge(items):
 def merge_sort(items):
     """Sort given items by splitting list into two approximately equal halves,
     sorting each recursively, and merging results into a list in sorted order.
-    TODO: Running time: O(n log n)
-    TODO: Memory usage: O(n)"""
+    Running time: O(n log n)
+    Memory usage: O(n)"""
     if len(items) <= 1:
         return items
     
@@ -54,8 +54,8 @@ def partition(items, low, high):
     `[low...high]` by choosing a pivot (TODO: document your method here) from
     that range, moving pivot into index `p`, items less than pivot into range
     `[low...p-1]`, and items greater than pivot into range `[p+1...high]`.
-    TODO: Running time: O(n)
-    TODO: Memory usage: O(1)"""
+    Running time: O(n)
+    Memory usage: O(1)"""
     pivot = items[high]
     i = low
     for j in range(low, high):
@@ -69,9 +69,9 @@ def partition(items, low, high):
 def quick_sort(items, low=None, high=None):
     """Sort given items in place by partitioning items in range `[low...high]`
     around a pivot item and recursively sorting each remaining sublist range.
-    TODO: Best case running time: O(n log n)
-    TODO: Worst case running time: O(n^2)
-    TODO: Memory usage: O(log n)"""
+    Best case running time: O(n log n)
+    Worst case running time: O(n^2)
+    Memory usage: O(log n)"""
     if low is None:
         low = 0
 
